@@ -1,0 +1,11 @@
+{
+  "name": "CleanDrone",
+  "version": "0.1.0",
+  "title": "CleanDrone \u2014 simple ground item collector drone",
+  "author": "You",
+  "factorio_version": "2.0",
+  "dependencies": [
+    "base >= 2.0"
+  ],
+  "description": "A simple flying drone that picks up items from the ground and delivers them to the nearest purple (Active provider) chest."
+}
