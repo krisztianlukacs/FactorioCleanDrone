@@ -1,31 +1,56 @@
-# CleanDrone (Factorio 2.0)
+CleanDrone — Automatic Ground Item Collector
+============================================
 
-A tiny mod that adds a **Clean Drone**: a flying helper that picks up items from the ground and delivers them to the nearest **purple (Active provider)** chest.
+**CleanDrone** adds small autonomous drones that automatically collect dropped or spilled items from the ground and deliver them directly to your player inventory.
+They are designed to keep your base clean and efficient — a convenient way to deal with debris, dropped ores, or destroyed structure remains.
 
-## Features
-- Searches for ground items (`item-entity`), picks them up, and caches them as cargo.
-- Flies to the nearest **Active provider** chest on the same force and inserts its cargo.
-- Simple scripted movement; no charging required.
-- Research gated by **red + green** science.
-- Recipe: **1× logistic-robot + 1× coal → 1× Clean Drone**.
+---
 
-## Installation
-1. Download the zip from your assistant and put it into your `Factorio/mods/` folder.
-2. Launch Factorio and enable **CleanDrone** in the Mods menu.
+### ✨ Features
+- **Autonomous collection:** Drones fly around and pick up all items dropped on the ground within their operating radius.
+- **Automatic delivery:** Collected items are stored directly in your character’s inventory.
+- **Recharge behavior:** Drones use your personal roboport to recharge, making them blend naturally with vanilla mechanics.
+- **Smart scanning:** Optimized logic with adjustable search radius and update intervals for better performance.
+- **Multiple drones support:** You can have several drones working simultaneously without conflicts.
+- **Shortcut recall:** A GUI button and hotkey (`Ctrl + Shift + R`) allow you to recall all drones instantly back to your inventory.
+- **Configurable:** Tune behavior in the mod settings — adjust speed, search radius, tick interval, or disable the controller requirement.
 
-## Tech & Recipe
-- Technology: **CleanDrone** (50 units; ingredients: 1× red + 1× green; time: 15).
-- Recipe (unlocked by the tech): 1× `logistic-robot` + 1× `coal` → 1× `Clean Drone`.
+---
 
-## Usage
-1. Place at least one **Active provider chest** (purple).
-2. Craft/place the **Clean Drone**.
-3. The drone will start collecting ground items and drop them into the nearest purple chest.
+### 🧩 Research & Crafting
+- Unlocks with a simple technology: **1 Red + 1 Green Science Pack**.
+- Recipe: **1 Worker Drone + 1 Carbon** (basic resource).
+- Produced in any assembling machine.
 
-## Notes
-- The drone is not part of the vanilla logistic network AI; it is fully script-driven.
-- Update cadence is every other tick for low overhead.
-- Cargo is capped heuristically at ~100 items before delivery.
-- You can retarget to Storage chests by changing `logistic_container_type` in `control.lua`.
+---
 
-Enjoy!
+### 🛠️ Compatibility
+- Works with **Factorio 2.0** and **Space Age**.
+- Tested alongside Mining Drones, Nanobots, and other automation mods.
+- Uses optimized on_tick scheduling to reduce CPU usage even with multiple drones.
+
+---
+
+### 🎮 Usage
+1. Craft one or more **Clean Drones**.
+2. Place them on the ground near your base — they will automatically start collecting items.
+3. Adjust behavior in *Settings → Mod Settings → CleanDrone*.
+4. Use the **Recall button** (bottom shortcut bar) or **Ctrl + Shift + R** to call them back anytime.
+
+---
+
+### 💡 Tips
+- Reduce CPU load by increasing the tick interval or lowering the search radius in settings.
+- Keep your inventory from filling up by using logistic trash slots — drones will respect those limits.
+- Drones are fully autonomous but will recharge using your personal roboport when needed.
+
+---
+
+### 🧠 Credits
+- Code & design: [Your name or nickname]
+- Icon & animation: custom pixel art, 32x36 sprites with 8-frame rotor animation
+- Special thanks to the Factorio modding community!
+
+---
+
+**CleanDrone** — Because even robots deserve a clean workplace.
