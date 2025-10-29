@@ -1,14 +1,13 @@
--- Recipe: 1 logistic-robot + 1 coal -> 1 CleanDrone
 data:extend({
   {
     type = "recipe",
     name = "clean-drone",
-    localised_name = {"recipe-name.clean-drone"},
     enabled = false,
     ingredients = {
-      {"logistic-robot", 1},
-      {"coal", 1}
+      {type = "item", name = "logistic-robot", amount = 1},
+      {type = "item", name = "coal", amount = 1}
     },
-    result = "clean-drone"
+    results = {{type = "item", name = "clean-drone", amount = 1}},
+    main_product = "clean-drone"
   }
 })
